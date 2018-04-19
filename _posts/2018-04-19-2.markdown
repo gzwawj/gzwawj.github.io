@@ -8,7 +8,7 @@ excerpt: Ubuntu网卡地址配置、设置 DNS和主机名
 mathjax: true
 ---
 
-## 一、网卡地址配置
+### 一、网卡地址配置
 Ubuntu的网络配置文件是：/etc/network/interfaces
 
 1、以DHCP 方式配置网卡
