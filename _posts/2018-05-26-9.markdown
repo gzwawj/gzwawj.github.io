@@ -36,9 +36,7 @@ git clone git://github.com/Stormherz/tablify.git
 
 `\ts` 排序表(列号将被提示)，支持文本和数字排序
 
-将来表格的每一行都是一个带有`|` 符号（或者您为 文件中的`g:tablify_raw_delimiter` 变量  选择的任何其他符号）分隔的单元格的文本行  `.vimrc`。
-
-假设我们有几行文字，我们希望看到如下表格：
+将来表格的每一行都是一个带有`|` 符号（或者您为 文件中的`g:tablify_raw_delimiter` 变量  选择的任何其他符号）分隔的单元格的文本行  `.vimrc`。假设我们有几行文字，我们希望看到如下表格：
 ```shell
 Artist | Song | Album | Year
 Tool | Useful idiot | Ænima | 1996
