@@ -21,13 +21,19 @@ git clone git://github.com/Stormherz/tablify.git
 ## 用法
 
 在开始制作表格之前，您需要知道一小部分命令。假设你  <Leader> 是  `\：`  
+
 `\tl` 或  `\tt` - 将选定的行转换为表格（左对齐的文本）  
+
 `\tc` - 将选定的行转换为表格（居中文本）  
+
 `\tr` - 将选定的行转换为表格（右对齐文本）  
+
 `\tu` - 将所选表格转换为原始文本格式你想添加一些变化  
+
 `\ta` - 选择光标内任何形成的表格（也可以选择未来表格的结构化文本）
 
 形成和选择表的操作:  
+
 `\ts` - 排序表（列号将被提示），支持文本和数字排序
 
 将来表格的每一行都是一个带有| 符号（或者您为 文件中的`g:tablify_raw_delimiter` 变量  选择的任何其他符号）分隔的单元格的文本行  `.vimrc`。
@@ -109,16 +115,26 @@ Ozzy Osbourne | Let Me Hear You \n Scream | Scream | 2010
 
 ## 组态
 `Tablify`行为可以根据以下变量在每个缓冲区中配置：  
+
 `g:loaded_tablify` - 设置为  `1` 禁用加载插件  
+
 `b:tablify_headerDelimiter` - 默认值为`#`，用于分隔文本中标题单元格的符号- 默认值为  ，用于分隔文本中单元格  
+
 `b:tablify_delimiter` 值的  `|`符号  
 
+
 `b:tablify_vertDelimiter` -默认值是  `|`，用于填充表的行垂直定界符符号  
+
 `b:tablify_horDelimiter` -默认值是  `-`，用于填充表的行水平定界符符号  
+
 `b:tablify_horHeaderDelimiter` -默认值是  `~`，对于填充tabls头行水平定界符符号  
+
 `b:tablify_divideDelimiter` -缺省值是  `+`在该行中，符号`/`列交叉点  
 
+
 `b:tablify_cellLeftPadding` - 默认值为  `1`，用于左侧单元格填充的空格数量  
+
 `b:tablify_cellRightPadding` - 默认值为  `1`用于右侧单元格填充的空格数量 
+
 
 **注意：在使用`\`命令时可以看到编辑器右下角有一个`\`符号，需要尽快按下对应的功能键，不然就会取消状态** 
