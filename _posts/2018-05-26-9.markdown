@@ -37,14 +37,14 @@ git clone git://github.com/Stormherz/tablify.git
 `\ts` 排序表(列号将被提示)，支持文本和数字排序
 
 将来表格的每一行都是一个带有`|` 符号（或者您为 文件中的`g:tablify_raw_delimiter` 变量  选择的任何其他符号）分隔的单元格的文本行  `.vimrc`。假设我们有几行文字，我们希望看到如下表格：
-```shell
+```text
 Artist | Song | Album | Year
 Tool | Useful idiot | Ænima | 1996
 Pantera | Cemetery Gates | Cowboys from Hell | 1990
 Ozzy Osbourne | Let Me Hear You Scream | Scream | 2010
 ```
 现在选择这些行并按下来  `\tt` 制作一个表格：
-```shell
+```text
 +---------------+------------------------+-------------------+------+
 | Artist        | Song                   | Album             | Year |
 +---------------+------------------------+-------------------+------+
@@ -59,14 +59,14 @@ Ozzy Osbourne | Let Me Hear You Scream | Scream | 2010
 我敢打赌这很简单。现在您可以按  `u` 取消制作表格或选择表格，然后按  `\tu` 回到您开始的文字。之后，你可以尝试  `\tc` ，并  `\tr` 看看它的样子已经排列在表中的文本。
 
 很明显，我们的表格有一些标题，并且将它与表格数据直观地区分开来会很棒。为此，只需使用`#` 符号（或您为 文件中的`g:tablify_header_delimiter` 变量选择的任何其他符号）  分隔标题单元格即可  `.vimrc`：  
-```shell
+```text
 Artist # Song # Album # Year
 Tool | Useful idiot | Ænima | 1996
 Pantera | Cemetery Gates | Cowboys from Hell | 1990
 Ozzy Osbourne | Let Me Hear You Scream | Scream | 2010
 ```
 这就是我们在执行后得到的结果：
-```shell
+```text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 | Artist        | Song                   | Album             | Year |
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,7 +79,7 @@ Ozzy Osbourne | Let Me Hear You Scream | Scream | 2010
 ```
 
 从通常前缀的文本行中删除表格是没有问题的，例如：
-```shell
+```text
 /**
  * Artist#Song#Album#Year
  * Tool|Useful idiot|Ænima|1996
@@ -90,14 +90,14 @@ Ozzy Osbourne | Let Me Hear You Scream | Scream | 2010
 ```
 多行单元格内容也被支持，只是`\n` 应该发生换行的地方  ，而`tablify`会完成剩下的工作：
 
-```shell
+```text
 Artist # Song # Album # Year
 Pantera | Cemetery Gates | Cowboys from Hell | 1990
 Tool \n (great perfomance)| Useful idiot | Ænima | 1996
 Ozzy Osbourne | Let Me Hear You \n Scream | Scream | 2010
 ```
 上面的示例转换为表格：
-```shell
+```text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 | Artist             | Song            | Album             | Year |
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
