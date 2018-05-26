@@ -5,12 +5,6 @@ date:   2018/5/26 10:25
 categories: 软件
 tags: vim
 excerpt: Tablify是一个VIM插件，可将简单的结构化数据转换为漂亮的表格。
-         
-         ## 安装
-         ```shell
-         cd ~/.vim/bundle
-         git clone git://github.com/Stormherz/tablify.git
-         ```
 mathjax: true
 ---
 
