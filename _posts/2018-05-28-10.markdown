@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PHP SPL(PHP 标准库)"
+title:  "PHP SPL标准库"
 date:   2018/5/28 16:41
 categories: php
 tags: php
