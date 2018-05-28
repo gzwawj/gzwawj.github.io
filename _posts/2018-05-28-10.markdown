@@ -14,17 +14,13 @@ mathjax: true
 
 
 ## 什么是SPL？
-
 SPL是用于解决典型问题(standard problems)的一组接口与类的集合。（出自：http://php.net/manual/zh/intro.spl.php）
 
 SPL，PHP 标准库（Standard PHP Library） ，从 PHP 5.0 起内置的组件和接口，且从 PHP5.3 已逐渐的成熟。SPL 在所有的 PHP5 开发环境中被内置，同时无需任何设置。
 
 ## 如何使用？
-
 SPL提供了一组标准数据结构：
-
 ### 双向链表
-
  - SplDoublyLinkedList
    - SplStack
    - SplQueue
@@ -185,7 +181,6 @@ echo "<br /><br />";
 ```
 
 ### 堆
-
 - SplHeap
   - SplMaxHeap
   - SplMinHeap
@@ -238,8 +233,8 @@ foreach ($obj as $item) {
     echo $item."<br />";
 }
 ```
-### 队列
 
+### 队列
 - SplPriorityQueue
 
 优先队列也是非常实用的一种数据结构，可以通过加权对值进行排序，由于排序在php内部实现，业务代码中将精简不少而且更高效。通过SplPriorityQueue::setExtractFlags(int  $flag)设置提取方式可以提取数据（等同最大堆）、优先级、和两者都提取的方式。
@@ -342,8 +337,8 @@ try{
     echo $e->getMessage();
 }
 ```
-### 映射
 
+### 映射
 - SplObjectStorage
 
 用来存储一组对象的，特别是当你需要唯一标识对象的时候。
