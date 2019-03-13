@@ -24,7 +24,9 @@
     {
       demo_link: '',
       img_link: '',
-      code_link: 'https://github.com/gzwawj/node-demo',
+      github_link: 'https://github.com/gzwawj/node-demo',
+      codepen_link: '',
+      jsfiddle_link: '',
       title: 'node搭建的小网站demo',
       core_tech: 'demo',
       description: '使用node开发一个增删改的用户管理系统'
@@ -58,7 +60,29 @@ function contentInit(content) {
   // var htmlStr = htmlArr.join('')
   var htmlStr = ''
   for (var i = 0; i < content.length; i++) {
-    htmlStr += '<div class="grid-item">' + '   <a class="a-img" href="' + content[i].demo_link + '">' + '       <img src="' + content[i].img_link + '">' + '   </a>' + '   <h3 class="demo-title">' + '       <a href="' + content[i].demo_link + '">' + content[i].title + '</a>' + '   </h3>' + '   <p>主要技术：' + content[i].core_tech + '</p>' + '   <p>' + content[i].description + '       <a href="' + content[i].code_link + '">源代码 <i class="fa fa-code" aria-hidden="true"></i></a>' + '   </p>' + '</div>'
+    htmlStr += '<div class="grid-item">';
+    htmlStr += '   <a class="a-img" href="' + content[i].demo_link + '">'
+    if(content[i].img_link){
+      htmlStr += '       <img src="' + content[i].img_link + '">'
+    }
+    htmlStr += '   </a>'
+    htmlStr += '   <h3 class="demo-title">'
+    htmlStr += '       <a href="' + content[i].demo_link + '">' + content[i].title + '</a>'
+    htmlStr += '   </h3>'
+    htmlStr += '   <p>主要技术：' + content[i].core_tech + '</p>'
+    htmlStr += '   <p>' + content[i].description + '</p>'
+    htmlStr += '   <p>'
+    if(content[i].github_link){
+      htmlStr += '       <a href="' + content[i].github_link + '"><i class="fa fa-github" aria-hidden="true"></i></a>'
+    }
+    if(content[i].codepen_link){
+      htmlStr += '       <a href="' + content[i].codepen_link + '"><i class="fa fa-codepen" aria-hidden="true"></i></a>'
+    }
+    if(content[i].jsfiddle_link){
+      htmlStr += '       <a href="' + content[i].jsfiddle_link + '"><i class="fa fa-jsfiddle" aria-hidden="true"></i></a>'
+    }
+    htmlStr += '   </p>'
+    htmlStr += '</div>'
   }
   var grid = document.querySelector('.grid')
   grid.insertAdjacentHTML('afterbegin', htmlStr)
