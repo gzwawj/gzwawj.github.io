@@ -13,14 +13,6 @@
      * 内容JSON
      */
   var demoContent = [
-    //{
-    //  demo_link: 'https://codepen.io/haoyang/pen/jrvrQq',
-    //  img_link: 'https://ooo.0o0.ooo/2016/11/24/5836d81f48cd2.png',
-    //  code_link: 'https://codepen.io/haoyang/pen/jrvrQq',
-    //  title: 'Fisher-Yates 洗牌算法动画',
-    //  core_tech: 'JavaScript',
-    //  description: 'Fisher-Yates 洗牌算法动画。算法详情见 <a href ="https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/">这里</a>。'
-   // }, 
     {
       demo_link: '',
       img_link: '',
@@ -28,175 +20,7 @@
       codepen_link: '',
       jsfiddle_link: '',
       title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },{
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },{
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
-    },
-    {
-      demo_link: '',
-      img_link: '',
-      github_link: 'https://github.com/gzwawj/node-demo',
-      codepen_link: '',
-      jsfiddle_link: '',
-      title: 'node搭建的小网站demo',
-      core_tech: 'demo',
+      core_tech: 'nodejs',
       description: '使用node开发一个增删改的用户管理系统'
     }
   ];
@@ -210,22 +34,6 @@
  * @return {[type]} [description]
  */
 function contentInit(content) {
-  // var htmlArr = [];
-  // for (var i = 0; i < content.length; i++) {
-  //     htmlArr.push('<div class="grid-item">')
-  //     htmlArr.push('<a class="a-img" href="'+content[i].demo_link+'">')
-  //     htmlArr.push('<img src="'+content[i].img_link+'">')
-  //     htmlArr.push('</a>')
-  //     htmlArr.push('<h3 class="demo-title">')
-  //     htmlArr.push('<a href="'+content[i].demo_link+'">'+content[i].title+'</a>')
-  //     htmlArr.push('</h3>')
-  //     htmlArr.push('<p>主要技术：'+content[i].core_tech+'</p>')
-  //     htmlArr.push('<p>'+content[i].description)
-  //     htmlArr.push('<a href="'+content[i].code_link+'">源代码 <i class="fa fa-code" aria-hidden="true"></i></a>')
-  //     htmlArr.push('</p>')
-  //     htmlArr.push('</div>')
-  // }
-  // var htmlStr = htmlArr.join('')
   var htmlStr = ''
   for (var i = 0; i < content.length; i++) {
     htmlStr += '<div class="grid-item">';
@@ -251,7 +59,6 @@ function contentInit(content) {
     }
     htmlStr += '   </p>'
     htmlStr += '</div>'
-
   }
   var grid = document.querySelector('.grid')
   grid.insertAdjacentHTML('afterbegin', htmlStr)

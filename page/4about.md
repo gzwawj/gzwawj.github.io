@@ -15,7 +15,7 @@ type: page
 
 ## 联系我
 
-* GitHub：[Gaohaoyang](https://github.com/gzwawj)
+* GitHub：[gzwawj](https://github.com/gzwawj)
 * qq: 936588357@qq.com
 
 
