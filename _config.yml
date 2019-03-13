@@ -11,7 +11,8 @@ brief-intro: 点点滴滴都很珍贵！
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gzwawj.github.io" # the base hostname & protocol for your site
 
-permalink: /:year/:month/:day/:title/
+# permalink: /:year/:month/:day/:title/
+permalink: /archives/:title
 
 # other links
 twitter_username: 
