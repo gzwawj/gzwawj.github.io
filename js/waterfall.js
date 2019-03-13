@@ -39,7 +39,7 @@
       jsfiddle_link: '',
       title: 'node搭建的小网站demo',
       core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
+      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
     },
     {
       demo_link: '',
@@ -59,7 +59,7 @@
       jsfiddle_link: '',
       title: 'node搭建的小网站demo',
       core_tech: 'demo',
-      description: '使用node开发一个增删改的用户管理系统'
+      description: '使用node开发一个增删改的用户管理系统使用node开发一个增删改的用户管理系统'
     },
     {
       demo_link: '',
