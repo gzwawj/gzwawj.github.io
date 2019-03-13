@@ -83,6 +83,7 @@ function contentInit(content) {
     }
     htmlStr += '   </p>'
     htmlStr += '</div>'
+    
   }
   var grid = document.querySelector('.grid')
   grid.insertAdjacentHTML('afterbegin', htmlStr)
