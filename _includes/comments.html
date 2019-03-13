@@ -44,3 +44,14 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+
+{% if site.intensedebate_shortname %}
+<!-- intensedebate评论 -->
+<script>
+var idcomments_acct = '{{site.intensedebate_shortname}}';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+{% endif %}
