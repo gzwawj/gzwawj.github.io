@@ -2,7 +2,7 @@
 layout: post
 title:  "vim使用Tablify表格转化插件"
 date:   2018/5/26 10:25
-categories: 软件
+categories: software
 tags: vim
 excerpt: Tablify是一个VIM插件，可将简单的结构化数据转换为漂亮的表格。
 mathjax: true
@@ -136,3 +136,5 @@ Ozzy Osbourne | Let Me Hear You \n Scream | Scream | 2010
 
 
 **注意：在使用`\`命令时可以看到编辑器右下角有一个`\`符号，需要尽快按下对应的功能键，不然就会取消状态** 
+
+[vim使用Tablify表格转化插件](https://gzwawj.github.io/archives/9)

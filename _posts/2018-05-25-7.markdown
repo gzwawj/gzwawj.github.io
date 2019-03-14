@@ -2,7 +2,7 @@
 layout: post
 title:  "Logparser的用法"
 date:   2018/5/25 16:30
-categories: 软件
+categories: software
 tags: Logparser
 excerpt: Logparser是一款非常强大的日志分析软件，可以帮助你详细的分析网站日志。是所有数据分析和网站优化人员都应该会的一个软件。
 mathjax: true
@@ -11,87 +11,90 @@ mathjax: true
 * content
 {:toc}
 
+## 下载安装
+Logparser是一款非常强大的日志分析软件，可以帮助你详细的分析网站日志。是所有数据分析和网站优化人员都应该会的一个软件。Logparser是微软的一款软件完全免费的，大家可以在微软的官网上去下载，下载地址：`http://www.microsoft.com/en-us/download/details.aspx?id=24659`
 
-Logparser是一款非常强大的日志分析软件，可以帮助你详细的分析网站日志。是所有数据分析和网站优化人员都应该会的一个软件。Logparser是微软的一款软件完全免费的，大家可以在微软的官网上去下载，下载地址：
+下载后安装也非常简单，只要按照步骤去安装就可以了，虽然软件语言是英语但是都是比较容易的。
 
-http://www.microsoft.com/en-us/download/details.aspx?id=24659
+## 使用方法
 
-   下载后安装也非常简单，只要按照步骤去安装就可以了，虽然软件语言是英语但是都是比较容易的。
-
-使用方法：
-
-
-最基本的格式：LogParser –i:输入文件的格式 –o:输出格式 “SQL语句”
+>最基本的格式：LogParser –i:输入文件的格式 –o:输出格式 “SQL语句”
 
 我们输入一个最简单的例子，把一个IIS日志转化成一个csv格式的表格，那么我们应该怎么做呢？
+
 ```shell
 C:\Program Files\Log Parser 2.2> logparser -i:iisw3c -o:csv “SELECT *FROM C:rizhi.log” >D:rizhi.scv
 ```
 
-   这就是完成了最简单的转换，把C盘中rizhi.log这个日志转换成csv格式并保存到D盘。我们要注意的是-i:iisw3c，-i代表的是输入，iisw3c代表的是日志格式，例子中分析的是iis日志，因此标准格式的iisw3c。-o:scv，-o 代表的是输出，csv是输出文件的格式。”SELECT*FROM”这个是分析日志的SQL命令语句，我们可以用不同的SQL语句来分析日志。
+这就是完成了最简单的转换，把C盘中rizhi.log这个日志转换成csv格式并保存到D盘。   
+我们要注意的是-i:iisw3c，-i代表的是输入，iisw3c代表的是日志格式，例子中分析的是iis日志，因此标准格式的iisw3c。-o:scv，-o 代表的是输出，csv是输出文件的格式。”SELECT*FROM”这个是分析日志的SQL命令语句，我们可以用不同的SQL语句来分析日志。
 
-注意：logparser是区分大小写的，因此SQL语句一定要用大写，不然会出错的。
+**注意**：logparser是区分大小写的，因此SQL语句一定要用大写，不然会出错的。
 
- 
+## 操作命令
 
 明白了logparser怎么去用，那么接下来给大家介绍一些我们经常用到的操作命令。
 
-## 对日志中的url进行归并统计 
+### 对日志中的url进行归并统计
+
 ```shell
 LogParser -o:csv "SELECT cs-uri-stem, COUNT(*) into a.csv FROM iis.log GROUP BY cs-uri-stem" 
 ```
 
-## 取出所有的asp页面
+### 取出所有的asp页面
 ```sql
 SELECT COUNT(*) FROM ex040528.log WHERE EXTRACT_EXTENSION(cs-uri-stem) LIKE 'asp'
 ```
 
-## 求出各个路径的访问次数
+### 求出各个路径的访问次数
 ```sql
 SELECT cs-uri-stem, COUNT(*) FROM ex040528.log GROUP BY cs-uri-stem
 ```
-## 求出各个资源类型的访问次数
+### 求出各个资源类型的访问次数
 ```sql
 SELECT EXTRACT_EXTENSION(cs-uri-stem) AS PageType, COUNT(*)
 FROM ex040528.log
 GROUP BY PageType
 ```
-## group by两个东东
+### group by两个东东
 ```sql
 SELECT EXTRACT_EXTENSION(cs-uri-stem) AS PageType, sc-status, COUNT(*)
 FROM ex040528.log
 GROUP BY PageType, sc-status
 ```
-## 求出各个资源类型的访问次数，并按访问次数降序排列
+### 求出各个资源类型的访问次数，并按访问次数降序排列
 ```sql
 SELECT EXTRACT_EXTENSION(cs-uri-stem) AS PageType, COUNT(*) AS PageTypeHits
 FROM ex040528.log
 GROUP BY PageType
 ORDER BY PageTypeHits DESC
 ```
-## 求出各个页面类型，各种返回结果占总点击数的比重
+### 求出各个页面类型，各种返回结果占总点击数的比重
 ```sql
 SELECT EXTRACT_EXTENSION(cs-uri-stem) AS PageType, sc-status, MUL(PROPCOUNT(*), 100.0) AS Hits
 FROM ex040528.log
 GROUP BY PageType, sc-status
 ORDER BY PageType, sc-status
 ```
-## 求出各个页面类型、各种返回结果的点击数占各种页面类型点击数的百分比
+### 求出各个页面类型、各种返回结果的点击数占各种页面类型点击数的百分比
 ```sql
 SELECT EXTRACT_EXTENSION(cs-uri-stem) AS PageType, sc-status, MUL(PROPCOUNT(*) ON (PageType), 100.0) AS Hits
 FROM ex040528.log
 GROUP BY PageType, sc-status
 ORDER BY PageType, sc-status
 ```
-## 求解各种类型的客户端环境占总环境数的百分比
+### 求解各种类型的客户端环境占总环境数的百分比
 ```sql
 SELECT DISTINCT cs(User-Agent) as IEType,count(*) as total,mul(propcount(*),100) as [percent(%)]
 FROM F:/挑战赛资料/ex081213.log
 group by IEType
 ```
-转义字符：
-/
-注意：
+## 转义字符
+> /
+
+**注意**
 order by后只能有一个desc或者asc
 order by的项必须要在select子句中
 having子句必须紧跟group子句
+
+[Logparser的用法](https://gzwawj.github.io/archives/7)

@@ -234,4 +234,4 @@ $ curl -E localcert.pem https://remote_server
 $ curl dict://dict.org/d:computer
 ```
 
-转自：https://www.linuxidc.com/Linux/2008-01/10891.htm
+[Linux curl使用简单介绍](https://gzwawj.github.io/archives/6)

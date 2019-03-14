@@ -2,7 +2,7 @@
 layout: post
 title:  "PHP SPL标准库"
 date:   2018/5/28 16:41
-categories: 编程
+categories: program
 tags: php
 excerpt: SPL，PHP 标准库（Standard PHP Library） ，从 PHP 5.0 起内置的组件和接口，且从 PHP5.3 已逐渐的成熟。SPL 在所有的 PHP5 开发环境中被内置，同时无需任何设置。
 mathjax: true
@@ -407,4 +407,4 @@ while($container->valid()) {
 }
 ```
 
-转自：https://www.cnblogs.com/yafang/p/5872187.html
+[PHP SPL标准库](https://gzwawj.github.io/archives/10)

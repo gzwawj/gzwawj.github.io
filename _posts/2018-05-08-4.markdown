@@ -2,18 +2,22 @@
 layout: post
 title:  "centos7 mysql数据库安装和配置"
 date:   2018/5/8 14:24
-categories: centos mysql
+categories: linux
 tags: mysql centos
 excerpt: 在centos7操作系统下安装mysql
 mathjax: true
 ---
-#### 一、系统环境
+
+* content
+{:toc}
+
+## 系统环境
 yum update升级以后的系统版本为
 ```shell
 [root@yl-web yl]# cat /etc/redhat-release 
 CentOS Linux release 7.1.1503 (Core) 
 ```
-#### 二、mysql安装
+## mysql安装
 一般网上给出的资料都是
 
 ```
@@ -35,8 +39,9 @@ Error: Nothing to do
 ```
 查资料发现是CentOS 7 版本将MySQL数据库软件从默认的程序列表中移除，用mariadb代替了。
 
-有两种解决办法：
-##### 1、方法一：安装mariadb
+### 有两种解决办法：
+#### 方法一：安装mariadb
+
 MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。开发这个分支的原因之一是：甲骨文公司收购了MySQL后，有将MySQL闭源的潜在风险，因此社区采用分支的方式来避开这个风险。MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。
 
 安装mariadb，大小59 M。
@@ -84,7 +89,7 @@ MariaDB [(none)]> show databases;
 MariaDB [(none)]> 
 ```
 安装mariadb后显示的也是 MariaDB [(none)]> ，可能看起来有点不习惯。下面是第二种方法。
-##### 2、方法二：官网下载安装mysql-server
+#### 方法二：官网下载安装mysql-server
 
 ```
 # wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
@@ -151,8 +156,10 @@ Replaced:
 [root@yl-web yl]# rpm -qa |grep mariadb
 [root@yl-web yl]# 
 ```
-##### 三、配置mysql
-###### 1、编码
+
+## 配置mysql
+### 编码
+
 mysql配置文件为/etc/my.cnf
 
 最后加上编码配置
@@ -161,7 +168,9 @@ mysql配置文件为/etc/my.cnf
 default-character-set =utf8
 ```
 这里的字符编码必须和/usr/share/mysql/charsets/Index.xml中一致。
-###### 2、远程连接设置
+
+### 远程连接设置
+
 把在所有数据库的所有表的所有权限赋值给位于所有IP地址的root用户。
 ```
 mysql> grant all privileges on *.* to root@'%'identified by 'password';
@@ -172,4 +181,4 @@ mysql>create user 'username'@'%' identified by 'password';
 ```
 此时就可以进行远程连接了。
     
-转自：https://www.cnblogs.com/starof/p/4680083.html
+[centos7 mysql数据库安装和配置](https://gzwawj.github.io/archives/4)

@@ -2,26 +2,27 @@
 layout: post
 title:  "配置虚拟机Ubuntu网络连接"
 date:   2018/4/19 11:48
-categories: ubuntu
-tags: ubuntu 虚拟机
+categories: linux
+tags: ubuntu virtual
 excerpt: 配置虚拟机Ubuntu网络连接
 mathjax: true
 ---
-### 有两种设置网络的方式：
-1. Bridged：在Ubuntu内部（/etc/network/interfaces)中设置的ip与主机类似；
-2. NAT： 在Ubuntu内部中设置为dhcp（自动获取）。 
+
+* content
+{:toc}
+
+## 有两种设置网络的方式：
+
+- Bridged：在Ubuntu内部（/etc/network/interfaces)中设置的ip与主机类似；
+- NAT： 在Ubuntu内部中设置为dhcp（自动获取）。 
 
 另外还需要通过Virtual Network Editor 进行设置。
 
 有时候也要看人品的。反正我设置第一种一致没有成功。 
 
- 
+## 关于设置Ubuntu的interfaces：
 
-##### 关于设置Ubuntu的interfaces：
-
- 
-
-一个基本的配置大概是下面这个样子： 
+### 基本的配置大概是下面这个样子
 
 ```shell
 1 auto lo
@@ -46,7 +47,8 @@ mathjax: true
 
 第7行-第11行分别设置eth0接口的ip、网络号、掩码、广播地址和网关。
 
-再来看一个更复杂点的：
+### 再来看一个更复杂点的
+
 ```shell
 12 auto eth0
 13 iface eth0 inet static
@@ -67,7 +69,8 @@ mathjax: true
 
 至于配置路由的写法，仔细看，它就是route命令嘛。
 
-继续，下面是一个物理网卡上多个接口的配置方法：
+### 继续，一个物理网卡上多个接口的配置方法
+
 ```shell
 23 auto eth0 eth0:1
 24 iface eth0 inet static
@@ -91,7 +94,8 @@ mathjax: true
 ```
 第36行会在激活eth0之前检查/etc/network/local-network-ok文件是否存在，如果不存在，则不会激活eth0。
 
-再更进一步的例子：
+### 再更进一步的例子
+
 ```shell
 37 auto eth0 eth1
 38 iface eth0 inet static
@@ -108,6 +112,7 @@ mathjax: true
 第42行和第45行是假定在这两块网卡上分别执行的命令，你可以把它们替换成你想要的任何玩意 ：）
 
 手 册上说，这种方法主要是用来检测两块网卡的MAC地址交换（If their MAC addresses get swapped），其实就是两块网卡名互换了，这种情况在debian系统上再常见不过了，主要是因为内核识别网卡的顺序发生了变化。这个问题可以用下面 的这种方法来避免。
+
 ```shell
 46 auto eth0 eth1
 47 mapping eth0 eth1
@@ -125,7 +130,8 @@ mathjax: true
 
 这段配置首先配置了两个逻辑接口（这个名词的定义请参见debian参考手册）lan和internet，然后根据网卡的MAC地址，将逻辑接口映射（mapped）到物理接口上去。
 
-再来看下面这段配置：
+### 再来看下面这段配置
+
 ```shell
 57 auto eth0  
 58 iface eth0 inet manual  
@@ -135,7 +141,8 @@ mathjax: true
 ```
 这段配置只是启用一个网卡，但是ifupdown不对这个网卡设置任何ip，而是由外部程序来设置ip。
 
-最后一段配置，这段配置启用了网卡的混杂模式，用来当监听接口。
+### 最后一段配置，这段配置启用了网卡的混杂模式，用来当监听接口
+
 ```shell
 177 auto eth0
 178 iface eth0 inet manual
@@ -145,3 +152,5 @@ mathjax: true
 182       down ifconfig $IFACE down
 ```
 好了，interfaces中对于以太网卡的配置基本上介绍完了
+
+[配置虚拟机Ubuntu网络连接](https://gzwawj.github.io/archives/3)
