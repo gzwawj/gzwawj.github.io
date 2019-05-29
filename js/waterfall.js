@@ -15,7 +15,7 @@
   var demoContent = [
     {
       demo_link: '',
-      img_link: '',
+      img_link: 'https://raw.githubusercontent.com/gzwawj/html-css-js/master/calculate/img/demoing.jpg',
       github_link: 'https://github.com/gzwawj/node-demo',
       codepen_link: '',
       jsfiddle_link: '',
