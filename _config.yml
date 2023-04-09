@@ -15,28 +15,15 @@ url: "https://gzwawj.github.io" # the base hostname & protocol for your site
 permalink: /archives/:title
 
 # other links
-twitter_username: 
-facebook_username: 
 github_username:  gzwawj
 email: guo5zhi8wei@outlook.com
-weibo_username: 
-zhihu_username: 
-linkedIn_username: 
-dribbble_username:
 
 description_footer: 本站记录我的技术生涯！
 
 # comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: 
 intensedebate_shortname: eaff9cd10bc117adc2b44ec5a39ff0d2
 
 # statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
 baidu_tongji_id: 608e993fa4facaf57544b32de60bd794
 google_analytics_id:  UA-136134038-1 # google 分析追踪id
 
@@ -46,9 +33,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-# port
-# port: 1234
 
 # url
 category_dir: category/
@@ -60,3 +44,6 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 gems: [jekyll-paginate]
 paginate: 6
+
+# cdn
+cdn_url: https://cdn.jsdelivr.net/gh/gzwawj/gzwawj.github.io
