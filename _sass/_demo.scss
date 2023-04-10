@@ -1,22 +1,27 @@
 .page[demo] {
     .left {
         width: 75%;
+
         a {
             color: #4d6dad;
             transition: 0.5s ease;
+
             &:hover {
                 color: #223253;
                 background-color: #f4efeb;
             }
         }
+
         .grid {
             margin: 0 auto;
+
             /* clearfix */
             &:after {
                 content: '';
                 display: block;
                 clear: both;
             }
+
             .grid-item {
                 width: 250px;
                 overflow: hidden;
@@ -32,28 +37,32 @@
                 -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
                 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
                 &:hover {
                     -webkit-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
                     -moz-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
                     box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
 
                 }
+
                 .a-img {
                     display: block;
                     height: 173px;
                     width: 230px;
                     color: #fff;
-                    
+
                     &:hover {
                         color: #fff;
                         background-color: #fff;
                     }
                 }
+
                 .demo-title {
                     font-size: 18px;
                     font-weight: bold;
                     margin: 0 8px;
                 }
+
                 p {
                     margin: 0;
                     padding: 0 8px;
@@ -63,7 +72,16 @@
         }
     }
 }
-.deep{
+
+@media screen and (max-width: 770px) {
+    .page[demo] {
+        .left {
+            width: 100%;
+        }
+    }
+}
+
+.deep {
     transition: .32s cubic-bezier(0.46, 0.03, 0.52, 0.96);
     transform-style: preserve-3d;
     transform: perspective(1600px) rotateX(14deg) translateZ(-200px);

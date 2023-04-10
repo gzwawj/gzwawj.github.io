@@ -14,7 +14,7 @@ layout: default
                 <div>
                     Content
                 </div>
-                <ul id="content-side" class="content-ul">{% d in site.data.demos %}
+                <ul id="content-side" class="content-ul">{% for d in site.data.demos %}
                     <li>
                         <a data-scroll href="#{{ d.title }}">{{ d.title }}</a>
                     </li>{% endfor %}
