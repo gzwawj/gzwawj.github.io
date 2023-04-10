@@ -73,4 +73,10 @@ layout: default
             <!-- 其他div框放到这里 -->
         </div>
     </div>
+    <script>
+        var aTags = document.querySelectorAll('article a:not([id])')
+        for (var i = 0; i < aTags.length; i++) {
+            aTags[i].setAttribute('target', '_blank')
+        }
+    </script>
 </div>
