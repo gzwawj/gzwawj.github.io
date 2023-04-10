@@ -32,8 +32,11 @@
 
       ga('create', '{{site.google_analytics_id}}', 'auto');
       ga('send', 'pageview');
-    </script>{% endif %}{% if post.type == "page" %}
+    </script>{% endif %}{% if page.type == "page" %}
     <script>
       is_page = true
+    </script>{% else %}
+    <script>
+      is_page = false
     </script>{% endif %}
 </head>
