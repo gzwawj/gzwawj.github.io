@@ -164,9 +164,18 @@ smoothScroll.init({
   offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
 });
 
-(function() {
+(function () {
   var aTags = document.querySelectorAll('article a:not([id])')
   for (var i = 0; i < aTags.length; i++) {
-      aTags[i].setAttribute('target', '_blank')
+    aTags[i].setAttribute('target', '_blank')
   }
 }());
+
+(function () {
+  var msnry = new Masonry('.grid', {
+    itemSelector: '.grid-item',
+    columnWidth: 250,
+    isFitWidth: true,
+    gutter: 20
+  })
+}())

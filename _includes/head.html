@@ -6,8 +6,9 @@
     <meta name="keywords" content="{{ page.tags | join: ',' | escape }}"/> 
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gzwawj/gzwawj.github.io/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gzwawj/gzwawj.github.io/css/main.230410.min.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml " | prepend: site.baseurl | prepend: site.url }}">
 
@@ -31,6 +32,8 @@
 
       ga('create', '{{site.google_analytics_id}}', 'auto');
       ga('send', 'pageview');
-    </script>
-{% endif %}
+    </script>{% endif %}{% if post.type == "page" %}
+    <script>
+      is_page = true
+    </script>{% endif %}
 </head>
