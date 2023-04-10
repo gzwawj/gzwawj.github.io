@@ -151,13 +151,6 @@ function setContentClick() {
   })
 }());
 
-(function () {
-  if (is_page) {
-    setFixedCls()
-    setContentClick()
-  }
-}())
-
 smoothScroll.init({
   speed: 500, // Integer. How fast to complete the scroll in milliseconds
   easing: 'easeInOutCubic', // Easing pattern to use
