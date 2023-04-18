@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content
 title: About
 permalink: /about/
 icon: heart
@@ -22,13 +22,9 @@ comment: true
 
 ## 关于本站
 
-**本站使用 jekyll 博客主题，详情请访问：[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
+**本站使用 jekyll主题：[HyG](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
 
 ## 友情链接
 
- [聆听风声](http://www.codeinfo.top/) 
-
-## Comments
-
-{% include comments.html %}
+ [聆听风声](http://www.rencaixiu.cn/) 
