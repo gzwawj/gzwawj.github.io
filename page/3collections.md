@@ -4,6 +4,7 @@ title: Collections
 permalink: /collection/
 icon: bookmark
 type: page
+comment: true
 ---
 
 * content

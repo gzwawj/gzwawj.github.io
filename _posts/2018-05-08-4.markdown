@@ -5,7 +5,7 @@ date:   2018/5/8 14:24
 categories: linux
 tags: mysql centos
 excerpt: 在centos7操作系统下安装mysql
-mathjax: true
+comment: true
 ---
 
 * content

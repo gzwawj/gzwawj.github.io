@@ -5,7 +5,7 @@ date:   2018/5/22 14:38
 categories: linux
 tags: linux
 excerpt: 在本文中，我们将看到如何在Linux中创建，复制，移动和删除以空格和特殊字符（例如＃，*，＆，=等）开头的文件名。
-mathjax: true
+comment: true
 ---
 
 * content

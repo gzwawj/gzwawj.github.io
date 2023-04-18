@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 icon: heart
 type: page
+comment: true
 ---
 
 * content

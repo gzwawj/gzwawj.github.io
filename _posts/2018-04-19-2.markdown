@@ -5,7 +5,7 @@ date:   2018-04-19 11:13:54
 categories: linux
 tags: ubuntu network
 excerpt: Ubuntu网卡地址配置、设置 DNS和主机名
-mathjax: true
+comment: true
 ---
 
 * content

@@ -5,7 +5,7 @@ date:   2018/4/19 11:48
 categories: linux
 tags: ubuntu virtual
 excerpt: 配置虚拟机Ubuntu网络连接
-mathjax: true
+comment: true
 ---
 
 * content

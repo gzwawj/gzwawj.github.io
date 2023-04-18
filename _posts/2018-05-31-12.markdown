@@ -5,7 +5,7 @@ date:   2018/5/31 10:38
 categories: program
 tags: php
 excerpt: 对于PHP开发者来 说，一旦某个产品投入使用，应该立即将 display_errors选项关闭，以免因为这些错误所透露的路径、数据库连接、数据表等信息而遭到黑客攻击。但是，任何一个产品在投入使用后，都难 免会有错误出现，那么如何记录一些对开发者有用的错误报告呢？
-mathjax: true
+comment: true
 ---
 
 * content

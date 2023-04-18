@@ -5,7 +5,7 @@ date:   2018/5/25 16:44
 categories: software
 tags: vim
 excerpt: vim毕竟是个编辑器，正则表达式中包含的大量元字符如果原封不动地引用（像perl 那样）， 势必会给不懂正则表达式的人造成麻烦，比如 /foo(1) 命令， 大多数人都用它来查找foo(1)这个字符串， 但如果按照正则表达式来解释，被查找的对象就成了 foo1 了。
-mathjax: true
+comment: true
 ---
 
 * content
