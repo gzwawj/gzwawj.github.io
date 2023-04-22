@@ -9,7 +9,7 @@ self.assets = [
 	'/fonts/FontAwesome.otf',
 	'/css/style.css',
 	'/js/masonry.pkgd.min.js',
-	'/js/smooth-scroll.min',
+	'/js/smooth-scroll.min.js',
 	'/js/main.min.js',
 ];
 self.assetsVersion = "9116f1ca39faad37cd26fe92bbef6f3d";
@@ -28,13 +28,26 @@ caches.open(self.assetsVersion).then(cache => {
 })
 //静态资源采用staleWhileRevalidate策略，安全可靠
 workbox.routing.registerRoute(
-	new RegExp('gzwawj\.github\.io'),
-	workbox.strategies.staleWhileRevalidate({
-		cacheName: self.assetsVersion,
-		plugins: [
-			new workbox.expiration.Plugin({
-				maxEntries: 20
-			})
-		]
-	})
+	new RegExp('gzwawj.github.io.*.(?:js|css|eot|svg|ttf|woff2|woff|otf|ico)', ''),
+	workbox.strategies.cacheFirst()
+	// workbox.strategies.staleWhileRevalidate({
+	// 	cacheName: self.assetsVersion,
+	// 	plugins: [
+	// 		new workbox.expiration.Plugin({
+	// 			maxEntries: 20
+	// 		})
+	// 	]
+	// })
+);
+workbox.routing.registerRoute(
+	new RegExp('www.intensedebate.com.*.(?:js|css|ico|png|gif)', ''),
+	workbox.strategies.cacheFirst()
+	// workbox.strategies.staleWhileRevalidate({
+	// 	cacheName: self.assetsVersion,
+	// 	plugins: [
+	// 		new workbox.expiration.Plugin({
+	// 			maxEntries: 20
+	// 		})
+	// 	]
+	// })
 );
