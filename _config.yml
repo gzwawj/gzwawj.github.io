@@ -12,7 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gzwawj.github.io" # the base hostname & protocol for your site
 
 # permalink: /:year/:month/:day/:title/
-permalink: /archives/:title
+permalink: /archives/:title.html
 
 # other links
 github_username:  gzwawj

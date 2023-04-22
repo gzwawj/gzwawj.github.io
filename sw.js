@@ -23,10 +23,19 @@ workbox.setConfig({
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-caches.open(self.assetsVersion).then(cache => {
-	cache.addAll(self.assets)
-})
+workbox.precaching.precacheAndRoute(self.assets);
 //静态资源采用staleWhileRevalidate策略，安全可靠
+workbox.routing.registerRoute(
+	new RegExp('gzwawj.github.io.*.(?:html)', ''),
+	workbox.strategies.staleWhileRevalidate({
+		cacheName: self.assetsVersion,
+		plugins: [
+			new workbox.expiration.Plugin({
+				maxEntries: 20
+			})
+		]
+	})
+);
 workbox.routing.registerRoute(
 	new RegExp('gzwawj.github.io.*.(?:js|css|eot|svg|ttf|woff2|woff|otf|ico)', ''),
 	workbox.strategies.cacheFirst({

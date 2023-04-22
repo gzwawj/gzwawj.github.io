@@ -23,13 +23,15 @@ comment: true
         </p>
     </div>{% endfor %}
 </div>
-<script src="/js/masonry.pkgd.min.js" charset="utf-8"></script>
+<script defer src="/js/masonry.pkgd.min.js" charset="utf-8"></script>
 <script>
-    new Masonry(".grid",{
-        itemSelector: ".grid-item",
-        columnWidth: 250,
-        isFitWidth: !0,
-        gutter: 20
-    });
+    (function() {
+        new Masonry(".grid",{
+            itemSelector: ".grid-item",
+            columnWidth: 250,
+            isFitWidth: !0,
+            gutter: 20
+        });
+    })()
 </script>
 {% include comments.html %}
