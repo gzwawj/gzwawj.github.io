@@ -26,7 +26,7 @@ workbox.clientsClaim();
 workbox.precaching.precacheAndRoute(self.assets);
 //静态资源采用staleWhileRevalidate策略，安全可靠
 workbox.routing.registerRoute(
-	new RegExp('gzwawj.github.io.*.(?:html)', ''),
+	new RegExp('gzwawj\.github\.io.*.(?:html)', ''),
 	workbox.strategies.staleWhileRevalidate({
 		cacheName: self.assetsVersion,
 		plugins: [
@@ -37,13 +37,13 @@ workbox.routing.registerRoute(
 	})
 );
 workbox.routing.registerRoute(
-	new RegExp('gzwawj.github.io.*.(?:js|css|eot|svg|ttf|woff2|woff|otf|ico)', ''),
+	new RegExp('gzwawj\.github\.io.*.(?:js|css|eot|svg|ttf|woff2|woff|otf|ico)', ''),
 	workbox.strategies.cacheFirst({
 		cacheName: self.assetsVersion
 	})
 );
 workbox.routing.registerRoute(
-	new RegExp('www.intensedebate.com.*.(?:js|css|ico|png|gif)', ''),
+	new RegExp('www\.intensedebate\.com.*.(?:js|css|ico|png|gif)', ''),
 	workbox.strategies.cacheFirst({
 		cacheName: self.assetsVersion
 	})
