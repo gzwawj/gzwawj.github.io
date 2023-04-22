@@ -44,7 +44,12 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
 	new RegExp('www\.intensedebate\.com.*.(?:js|css|ico|png|gif)', ''),
-	workbox.strategies.cacheFirst({
-		cacheName: self.assetsVersion
+	workbox.strategies.staleWhileRevalidate({
+		cacheName: self.assetsVersion,
+		plugins: [
+			new workbox.expiration.Plugin({
+				maxEntries: 20
+			})
+		]
 	})
 );
