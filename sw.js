@@ -12,10 +12,10 @@ self.assets = [
 	'/js/main.min.js',
 ];
 //然后引入workbox
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js');
 workbox.setConfig({
 	debug: false,
-	modulePathPrefix: 'https://storage.googleapis.com/workbox-cdn/releases/4.2.0/'
+	modulePathPrefix: 'https://storage.googleapis.com/workbox-cdn/releases/3.3.0/'
 });
 workbox.core.setCacheNameDetails({
 	prefix: 'gzwawj',
@@ -26,7 +26,6 @@ workbox.core.setCacheNameDetails({
 //直接激活跳过等待阶段
 workbox.skipWaiting();
 workbox.clientsClaim();
-self.assetsVersion = workbox.core.cacheNames.runtime
 workbox.precaching.precacheAndRoute(self.assets);
 //静态资源采用staleWhileRevalidate策略，安全可靠
 workbox.routing.registerRoute(
