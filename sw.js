@@ -12,10 +12,10 @@ self.assets = [
 	'/js/main.min.js',
 ];
 //然后引入workbox
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js');
 workbox.setConfig({
 	debug: false,
-	modulePathPrefix: 'https://storage.googleapis.com/workbox-cdn/releases/3.3.0/'
+	modulePathPrefix: 'https://storage.googleapis.com/workbox-cdn/releases/4.2.0/'
 });
 workbox.core.setCacheNameDetails({
 	prefix: 'gzwawj',
@@ -31,29 +31,13 @@ workbox.precaching.precacheAndRoute(self.assets);
 //静态资源采用staleWhileRevalidate策略，安全可靠
 workbox.routing.registerRoute(
 	new RegExp('gzwawj\.github\.io.*.(?:html)', ''),
-	workbox.strategies.staleWhileRevalidate({
-		cacheName: self.assetsVersion,
-		plugins: [
-			new workbox.expiration.Plugin({
-				maxEntries: 20
-			})
-		]
-	})
+	workbox.strategies.staleWhileRevalidate()
 );
 workbox.routing.registerRoute(
 	new RegExp('gzwawj\.github\.io.*.(?:js|css|eot|svg|ttf|woff2|woff|otf|ico)', ''),
-	workbox.strategies.cacheFirst({
-		cacheName: self.assetsVersion
-	})
+	workbox.strategies.cacheFirst()
 );
 workbox.routing.registerRoute(
 	new RegExp('https:\/\/www\.intensedebate\.com.*.(?:js|css|ico|png|gif)', ''),
-	workbox.strategies.staleWhileRevalidate({
-		cacheName: self.assetsVersion,
-		plugins: [
-			new workbox.expiration.Plugin({
-				maxEntries: 20
-			})
-		]
-	})
+	workbox.strategies.staleWhileRevalidate()
 );
